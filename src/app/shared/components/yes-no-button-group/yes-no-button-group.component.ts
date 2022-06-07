@@ -1,4 +1,12 @@
-import { Component, EventEmitter, forwardRef, Input, OnInit, Output } from '@angular/core';
+import { UniqueIdService } from './../../services/unique-id/unique-id.service';
+import {
+  Component,
+  EventEmitter,
+  forwardRef,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -9,22 +17,24 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     {
       provide: NG_VALUE_ACCESSOR,
       multi: true,
-      useExisting: forwardRef(()=> YesNoButtonGroupComponent)
-    }
-  ]
+      useExisting: forwardRef(() => YesNoButtonGroupComponent),
+    },
+  ],
 })
 export class YesNoButtonGroupComponent implements OnInit, ControlValueAccessor {
-  @Input() public value:string = '';
+  @Input() public value: string = '';
   @Input() public label = '';
   @Output() public valueChange = new EventEmitter<string>();
+  public id: string | null = null;
   public options = YesNoButtonGroupOptions;
-  public onChange = (value:string) => {};
+  public onChange = (value: string) => {};
   public onTouched = () => {};
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(uniqueIdService: UniqueIdService) {
+    this.id = uniqueIdService.generateUniqueIdWithPrefix('yes-no-button-group');
   }
+
+  ngOnInit(): void {}
 
   public writeValue(value: string): void {
     this.value = value;
@@ -32,7 +42,7 @@ export class YesNoButtonGroupComponent implements OnInit, ControlValueAccessor {
     this.valueChange.emit(this.value);
   }
 
-  public registerOnChange(fn: (value:string)=>void): void {
+  public registerOnChange(fn: (value: string) => void): void {
     this.onChange = fn;
   }
 
@@ -40,13 +50,12 @@ export class YesNoButtonGroupComponent implements OnInit, ControlValueAccessor {
     this.onTouched = fn;
   }
 
-  public activate(value: string): void{
+  public activate(value: string): void {
     this.writeValue(value);
   }
-
 }
 
 enum YesNoButtonGroupOptions {
   YES = 'yes',
-  NO = 'no'
+  NO = 'no',
 }
