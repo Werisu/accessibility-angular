@@ -1,3 +1,4 @@
+import { DisableControlModule } from './shared/directives/disable-control/disable-control.module';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,7 +16,8 @@ import { YesNoButtonGroupModule } from './shared/components/yes-no-button-group/
     AppRoutingModule,
     YesNoButtonGroupModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    DisableControlModule
   ],
   providers: [],
   bootstrap: [AppComponent]
