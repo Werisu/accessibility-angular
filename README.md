@@ -1,27 +1,59 @@
 # Accessibility
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+Um projeto simples para mostrar meus conhecimentos com a implementação de um dos recursos do Angular mais importante para o desenvolvimento de páginas Web: **Acessibilidade**.
 
-## Development server
+## 🚀 Começando
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-## Code scaffolding
+Consulte **Implantação** para saber como implantar o projeto.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 📋 Pré-requisitos
 
-## Build
+De que coisas você precisa para instalar o software e como instalá-lo?
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+Você precisará do Node e do Angular instalados.
 
-## Running unit tests
+Angular CLI: 13.3.0
+Node: 16.14.2
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Sugiro o uso do Visual Studio Code.
+```
 
-## Running end-to-end tests
+### 🔧 Instalação
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
 
-## Further help
+Essa etapa será:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+Faça o clone do projeto, em seguida execute o comando npm install no terminal dentro do diretório do projeto para baixar as dependências do projeto. Para iniciá-lo, execute ng s -o.
+```
+
+
+## 📦 Desenvolvimento
+
+Atividade exemplificativa.
+
+## 🛠️ Construído com
+
+As ferramentas que utilizei para implementar o meu projeto
+
+* [Angular](https://angular.io/) - O framework web usado
+* [VS Code](https://code.visualstudio.com/) - Editor
+
+## 🎁 Expressões de gratidão
+
+* Conte a outras pessoas sobre este projeto 📢
+* Convide alguém da equipe para uma cerveja 🍺 
+* Obrigado publicamente 🤓.
+* etc.
+
+## 👨‍💻 Redes Sociais
+
+* [LinkedIn](https://www.linkedin.com/in/wellyssonrocha-fullstack/)
+* [Instagram](https://www.instagram.com/opa_enjuru/)
+
+---
+⌨️ com ❤️ por [Wellysson Rocha](https://github.com/Werisu) 😊
